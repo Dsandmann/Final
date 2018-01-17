@@ -235,28 +235,7 @@ $(document).scroll(function(event) {
     }
 });
 
-$(document).ready(function(){
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  autoplay:true,
-  autoplayTimeout:3000,
-  autoplayHoverPause:true,
-  responsiveClass:true,
-  responsive:{
-        0:{
-            items:1,
-        },
-        600:{
-            items:1,
-        },
-        1000:{
-            items:1,
-        }
-  }
-})
-});
-
+  
 
 
 
@@ -331,8 +310,8 @@ function collisionDetection() {
     b.status = 0;
     score++;
     if(score == brickRowCount*brickColumnCount) {
-    alert("YOU WIN, CONGRATS!");
-    document.location.reload();
+    ("YOU WIN, CONGRATS!");
+
   }
   }
   }
@@ -364,7 +343,7 @@ function drawBricks() {
     bricks[c][r].y = brickY;
     ctx.beginPath();
     ctx.rect(brickX, brickY, brickWidth, brickHeight);
-    ctx.fillStyle = "purple";
+    ctx.fillStyle = "rgb(224, 247, 246)";
     ctx.fill();
     ctx.closePath();
   }
@@ -407,8 +386,8 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                alert("GAME OVER");
-                document.location.reload();
+                ("GAME OVER");
+
             }
             else {
                 x = canvas.width/2;
